@@ -342,4 +342,15 @@ colframe=yellow!45!black]\begin{bxca}}{\end{bxca}\end{tcolorbox}}
 \fancyhead[L]{\course}
 \setlength{\headheight}{14pt}
 
+% \theindex (and a few other LaTeX internals, e.g. \maketitle) switch to
+% the "plain" page style for their first page. Left at its default, plain
+% puts the page number centered at the bottom instead of on the right, so
+% that one page looks different from the rest of the document. Redefine
+% plain to match.
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
 \endinput
