@@ -41,6 +41,7 @@
 \RequirePackage[english.nosectiondot]{babel}
 \RequirePackage{marginnote}
 \RequirePackage{xparse}
+\RequirePackage{enumitem}
 
 % ------------------------------------------------------------
 % Project bubble
@@ -158,9 +159,7 @@
 \renewcommand\sectionname{\S}
 
 % enumerate labels: 1), 2), 3), ...
-\renewcommand{\labelenumi}{\textbf{\arabic{enumi})}}
-
-\makeindex
+\setlist[enumerate,1]{label=\textbf{\arabic{enumi})}, ref=\textbf{\arabic{enumi})}}
 
 % ------------------------------------------------------------
 % Macros
